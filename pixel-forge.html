@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Forge | Cursos de Desenvolvimento de Games</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ícones externos para dar um charme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- NAV BAR -->
+    <header>
+        <div class="navbar container">
+            <div class="logo">
+                <i class="fas fa-gamepad"></i> PIXEL<span>FORGE</span>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#cursos">Cursos</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#contato" class="btn-nav">Forjar Meu Futuro</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- HERO SECTION (Destaque principal) -->
+    <section id="home" class="hero">
+        <div class="hero-content container">
+            <h1>Transforme suas ideias em <span class="neon-text">Jogos Reais</span></h1>
+            <p>Aprenda programação, arte 3D e game design com profissionais da indústria. Do zero ao seu primeiro jogo publicado.</p>
+            <a href="#cursos" class="btn-main">Ver Cursos <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- SEÇÃO DE CURSOS -->
+    <section id="cursos" class="cursos-section container">
+        <h2>Nossos <span class="neon-text">Treinamentos</span></h2>
+        
+        <!-- Filtros interativos -->
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="todos">Todos</button>
+            <button class="filter-btn" data-filter="programacao">Programação</button>
+            <button class="filter-btn" data-filter="arte">Arte & Design</button>
+        </div>
+
+        <div class="courses-grid">
+            <!-- Curso 1 -->
+            <div class="course-card" data-category="programacao">
+                <div class="course-img image-placeholder">
+                    <i class="fab fa-unity"></i>
+                </div>
+                <div class="course-info">
+                    <h3>Master em Unity & C#</h3>
+                    <p>Domine a engine mais popular do mercado e crie jogos 2D e 3D do absoluto zero.</p>
+                    <span class="price">R$ 49,90/mês</span>
+                    <button class="btn-buy">Saber Mais</button>
+                </div>
+            </div>
+
+            <!-- Curso 2 -->
+            <div class="course-card" data-category="arte">
+                <div class="course-img image-placeholder art-bg">
+                    <i class="fas fa-paint-brush"></i>
+                </div>
+                <div class="course-info">
+                    <h3>Blender para Games</h3>
+                    <p>Aprenda modelagem, texturização e animação de personagens e cenários marcantes.</p>
+                    <span class="price">R$ 39,90/mês</span>
+                    <button class="btn-buy">Saber Mais</button>
+                </div>
+            </div>
+
+            <!-- Curso 3 -->
+            <div class="course-card" data-category="programacao">
+                <div class="course-img image-placeholder unreal-bg">
+                    <i class="fas fa-cubes"></i>
+                </div>
+                <div class="course-info">
+                    <h3>Unreal Engine 5 Blueprint</h3>
+                    <p>Crie jogos de altíssima fidelidade visual usando o sistema de lógica visual sem código.</p>
+                    <span class="price">R$ 59,90/mês</span>
+                    <button class="btn-buy">Saber Mais</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO CONTATO / NEWSLETTER -->
+    <section id="contato" class="contact-section">
+        <div class="container contact-container">
+            <h2>Pronto para começar a <span class="neon-text">Jornada</span>?</h2>
+            <p>Inscreva-se na nossa newsletter para receber aulas gratuitas e descontos exclusivos de lançamento.</p>
+            
+            <form id="contactForm" class="contact-form">
+                <input type="text" id="name" placeholder="Seu Nome de Jogador (Nick)" required>
+                <input type="email" id="email" placeholder="Seu melhor e-mail" required>
+                <button type="submit" class="btn-submit">Iniciar Missão</button>
+            </form>
+            <div id="formMessage" class="hidden"></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Pixel Forge. Desenvolvido para fins educacionais.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

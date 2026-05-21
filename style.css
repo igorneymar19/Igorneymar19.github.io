@@ -1,0 +1,342 @@
+/* RESET DE ESTILOS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+    --bg-color: #0b0c10;
+    --card-bg: #1f2833;
+    --neon-cyan: #66fcf1;
+    --neon-purple: #833ab4;
+    --text-color: #c5c6c7;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    overflow-x: hidden;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+header {
+    background-color: rgba(11, 12, 16, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--card-bg);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--white);
+    letter-spacing: 2px;
+}
+
+.logo i {
+    color: var(--neon-cyan);
+    margin-right: 8px;
+}
+
+.logo span {
+    color: var(--neon-purple);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    transition: 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--neon-cyan);
+}
+
+.btn-nav {
+    background: linear-gradient(45deg, var(--neon-purple), #fd1d1d);
+    color: var(--white) !important;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(131, 58, 180, 0.5);
+}
+
+.btn-nav:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(131, 58, 180, 0.8);
+}
+
+/* HERO SECTION */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(rgba(11, 12, 16, 0.8), rgba(11, 12, 16, 0.9)), 
+                url('https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&q=80&w=1920') no-repeat center center/cover;
+    padding-top: 80px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.neon-text {
+    color: var(--neon-cyan);
+    text-shadow: 0 0 10px rgba(102, 252, 241, 0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 40px;
+}
+
+.btn-main {
+    display: inline-block;
+    padding: 15px 35px;
+    background-color: transparent;
+    color: var(--neon-cyan);
+    border: 2px solid var(--neon-cyan);
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+    box-shadow: 0 0 15px rgba(102, 252, 241, 0.2);
+}
+
+.btn-main:hover {
+    background-color: var(--neon-cyan);
+    color: var(--bg-color);
+    box-shadow: 0 0 25px rgba(102, 252, 241, 0.6);
+}
+
+/* SEÇÃO CURSOS */
+.cursos-section {
+    padding: 100px 0;
+}
+
+.cursos-section h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: var(--white);
+}
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.filter-btn {
+    background-color: var(--card-bg);
+    border: 1px solid transparent;
+    color: var(--text-color);
+    padding: 10px 25px;
+    cursor: pointer;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.filter-btn.active, .filter-btn:hover {
+    border-color: var(--neon-cyan);
+    color: var(--neon-cyan);
+    background-color: rgba(102, 252, 241, 0.1);
+}
+
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.course-card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--neon-purple);
+    box-shadow: 0 10px 20px rgba(131, 58, 180, 0.2);
+}
+
+.course-img {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--neon-cyan);
+    background: linear-gradient(135deg, #2c3e50, #000000);
+}
+
+.art-bg {
+    color: #ff007f;
+    background: linear-gradient(135deg, #111, #4a00e0);
+}
+
+.unreal-bg {
+    color: #fff;
+    background: linear-gradient(135deg, #1a1a1a, #333);
+}
+
+.course-info {
+    padding: 25px;
+}
+
+.course-info h3 {
+    color: var(--white);
+    margin-bottom: 10px;
+}
+
+.course-info p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.price {
+    display: block;
+    font-size: 1.3rem;
+    color: var(--neon-cyan);
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn-buy {
+    width: 100%;
+    padding: 12px;
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    color: var(--white);
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn-buy:hover {
+    background-color: var(--white);
+    color: var(--bg-color);
+}
+
+/* CONTATO */
+.contact-section {
+    background-color: #141923;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.contact-container h2 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.contact-container p {
+    margin-bottom: 30px;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    background-color: var(--bg-color);
+    color: var(--white);
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-form input:focus {
+    outline: none;
+    border-color: var(--neon-cyan);
+}
+
+.btn-submit {
+    padding: 15px 30px;
+    background-color: var(--neon-cyan);
+    color: var(--bg-color);
+    border: none;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: var(--white);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+#formMessage {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+.success { color: #2ecc71; }
+.hidden { display: none; }
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--bg-color);
+    border-top: 1px solid var(--card-bg);
+    font-size: 0.9rem;
+}
+
+/* RESPONSIVIDADE (MOBILE) */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Simplificação para o escopo escolar */
+    .hero-content h1 { font-size: 2.3rem; }
+    .contact-form { flex-direction: column; }
+}
